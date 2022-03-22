@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProjectFormController">
+   <children>
+      <GridPane hgap="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="276.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.0" minWidth="10.0" prefWidth="282.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Número de Cadastro" GridPane.valignment="BOTTOM" />
+            <Label text="Situação" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+            <TextField fx:id="txtNumCadastro" maxWidth="1.7976931348623157E308" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <ComboBox fx:id="comboBoxSituacao" maxWidth="1.7976931348623157E308" onAction="#onComboBoxSituacaoAction" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Label text="Título" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <TextField fx:id="txtTitulo" maxWidth="1.7976931348623157E308" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Label text="Início" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+            <Label text="Fim" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+            <HBox spacing="3.0" GridPane.rowIndex="5">
+               <children>
+                  <ComboBox fx:id="comboBoxDaysInicio" onAction="#onComboBoxDaysAction" promptText="Dia" />
+                  <ComboBox fx:id="comboBoxMonthsInicio" onAction="#onComboBoxMonthsAction" promptText="Mẽs" />
+                  <ComboBox fx:id="comboBoxYearsInicio" onAction="#onComboBoxYearsAction" promptText="Ano" />
+               </children>
+            </HBox>
+            <HBox spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <ComboBox fx:id="comboBoxDaysEnd" onAction="#onComboBoxDaysAction" promptText="Dia" />
+                  <ComboBox fx:id="comboBoxMonthsEnd" onAction="#onComboBoxMonthsAction" promptText="Mês" />
+                  <ComboBox fx:id="comboBoxYearsEnd" onAction="#onComboBoxYearsAction" promptText="Ano" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0" GridPane.rowIndex="6">
+               <children>
+                  <Button fx:id="btSalvar" mnemonicParsing="false" onAction="#onBtSalvarAction" text="Salvar" />
+                  <Button fx:id="btSair" mnemonicParsing="false" onAction="#onBtSairAction" text="Sair" />
+                  <Button fx:id="btBuscar" mnemonicParsing="false" onAction="#onBtBuscarAction" text="Buscar" />
+               </children>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Button fx:id="btAtualizar" mnemonicParsing="false" onAction="#onBtAtualizarAction" text="Atualizar" />
+                  <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#onBtExcluirAction" text="Excluir" />
+               </children>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

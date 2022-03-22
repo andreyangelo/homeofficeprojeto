@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="321.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.IntegrantListController">
+   <children>
+      <Label text="Cadastro de Integrantes">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#onBtCadastrarAction" text="CADASTRAR" />
+            <Button fx:id="btPesquisar" mnemonicParsing="false" onAction="#onBtPesquisarAction" text="BUSCAR" />
+            <Button fx:id="btAtualizar" mnemonicParsing="false" onAction="#onBtAtualizarAction" text="ATUALIZAR" />
+            <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#onBtExcluirAction" prefHeight="26.0" prefWidth="81.0" text="EXCLUIR" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewIntegrant" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tableColumnNome" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="160.0" text="Nome" />
+            <TableColumn fx:id="tableColumnFuncao" prefWidth="75.0" text="Função" />
+          <TableColumn fx:id="tableColumnCargaHoraria" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="110.0" text="Carga Horária" />
+            <TableColumn fx:id="tableColumnNumeroProcesso" prefWidth="75.0" text="Processo" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
