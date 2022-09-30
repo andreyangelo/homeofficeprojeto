@@ -21,7 +21,6 @@ public class Main extends Application {
 			ScrollPane scrollPane = loader.load();
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
-			
 			mainScene = new Scene(scrollPane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Gerenciador");
